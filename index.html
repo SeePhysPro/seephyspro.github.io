@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SeePhys Pro: Diagnosing Modality Transfer and Blind-Training Effects in Multimodal RLVR for Physics Reasoning.">
+  <meta name="keywords" content="SeePhys Pro, multimodal reasoning, physics reasoning, RLVR, modality transfer, benchmark">
+  <title>SeePhys Pro</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar topnav" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item brand" href="#top">SeePhys Pro</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#benchmark">Benchmark</a>
+          <a class="navbar-item" href="#results">Results</a>
+          <a class="navbar-item" href="#training">Training</a>
+          <a class="navbar-item" href="#citation">Citation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero project-hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <p class="venue">NeurIPS 2026 Evaluations & Datasets Track</p>
+          <h1 class="title publication-title">
+            <span class="logo-text">
+              <span class="c-red">S</span><span class="c-coral">e</span><span class="c-gold">e</span><span class="c-green">P</span><span class="c-mint">h</span><span class="c-blue">y</span><span class="c-sky">s</span>
+              <span class="c-deep">P</span><span class="c-blue">r</span><span class="c-sky">o</span>
+            </span>
+          </h1>
+          <h2 class="subtitle publication-subtitle">
+            Diagnosing Modality Transfer and Blind-Training Effects in Multimodal RLVR for Physics Reasoning
+          </h2>
+
+          <div class="publication-authors">
+            <span class="author-block">Kun Xiang<sup>1</sup></span>
+            <span class="author-block">Terry Jingchen Zhang<sup>2</sup></span>
+            <span class="author-block">Zirong Liu<sup>1</sup></span>
+            <span class="author-block">Bokai Zhou<sup>1</sup></span>
+            <span class="author-block">Yueling Tang<sup>1</sup></span>
+            <span class="author-block">Junjie Yu<sup>1</sup></span>
+            <span class="author-block">Jiacong Lu<sup>1</sup></span>
+            <span class="author-block">Shangrui Huang<sup>1</sup></span>
+            <span class="author-block">Heng Li<sup>1</sup></span>
+            <span class="author-block">Likui Zhang<sup>1</sup></span>
+            <span class="author-block">Kunkun Liu<sup>4</sup></span>
+            <span class="author-block">Changzheng Zhang<sup>4</sup></span>
+            <span class="author-block">Yangle Fang<sup>4</sup></span>
+            <span class="author-block">Boqiang Guo<sup>4</sup></span>
+            <span class="author-block">Hui-Ling Zhen<sup>4</sup></span>
+            <span class="author-block">Dandan Tu<sup>4,*</sup></span>
+            <span class="author-block">Yinya Huang<sup>2,3</sup></span>
+            <span class="author-block">Xiaodan Liang<sup>1,*</sup></span>
+          </div>
+
+          <div class="affiliations">
+            <span><sup>1</sup>Sun Yat-sen University</span>
+            <span><sup>2</sup>ETH Zurich</span>
+            <span><sup>3</sup>ETH AI Center</span>
+            <span><sup>4</sup>Huawei Technologies Ltd.</span>
+          </div>
+
+          <div class="publication-links">
+            <a class="button is-dark is-rounded" href="./static/paper/seephyspro.pdf">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+            </a>
+            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/Kun-Xiang/Track3-SeePhysPro-Test">
+              <span class="icon"><i class="fas fa-database"></i></span><span>Dataset</span>
+            </a>
+            <a class="button is-dark is-rounded" href="https://www.codabench.org/competitions/16010/">
+              <span class="icon"><i class="fas fa-trophy"></i></span><span>Challenge</span>
+            </a>
+            <a class="button is-dark is-rounded is-disabled" aria-disabled="true">
+              <span class="icon"><i class="fab fa-github"></i></span><span>Code coming soon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container is-max-desktop">
+        <div class="content has-text-justified">
+          <p class="lead">
+            <strong>SeePhys Pro</strong> is a fine-grained modality-transfer benchmark for multimodal physics reasoning.
+            Each problem preserves the same physical semantics while progressively moving task-critical information from text into diagrams, revealing whether a model reasons over stable physics or over the surface form of the prompt.
+          </p>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><strong>1,000</strong><span>seed questions</span></div>
+          <div class="metric"><strong>4,000</strong><span>aligned variants</span></div>
+          <div class="metric"><strong>6</strong><span>disciplines</span></div>
+          <div class="metric"><strong>38</strong><span>domains</span></div>
+          <div class="metric"><strong>104</strong><span>fields</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title">Benchmark Design</h2>
+        <p class="section-lead">
+          The benchmark is built on the principle of <em>same physics, different representation</em>. Four aligned levels decompose the cost of structural transfer, visual variable grounding, and full image rendering.
+        </p>
+        <figure class="figure-panel">
+          <img src="./static/images/bmk_overview.png" alt="Overview of SeePhys Pro four modality-transfer levels.">
+          <figcaption>
+            Four semantically aligned variants: L1 text-only, L2 structure in image, L3 structure and variables in image, and L4 full problem rendered as a single visual input.
+          </figcaption>
+        </figure>
+        <div class="columns level-cards">
+          <div class="column"><div class="level-card"><b>L1</b><span>Text-only physics reasoning baseline.</span></div></div>
+          <div class="column"><div class="level-card"><b>L2</b><span>Physical structure moves into the diagram.</span></div></div>
+          <div class="column"><div class="level-card"><b>L3</b><span>Variables and labels must be read and grounded visually.</span></div></div>
+          <div class="column"><div class="level-card"><b>L4</b><span>Full handwritten statement and diagram are processed as one image.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light-band">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title">Data Construction</h2>
+        <p class="section-lead">
+          Seed problems are curated from public datasets, textbooks, exam papers, olympiad archives, and physics problem books, then manually transformed into aligned multimodal variants with preserved answers and solution paths.
+        </p>
+        <div class="columns is-vcentered">
+          <div class="column is-7">
+            <figure class="figure-panel flat">
+              <img src="./static/images/data_engine.png" alt="SeePhys Pro data construction engine.">
+            </figure>
+          </div>
+          <div class="column">
+            <ul class="clean-list">
+              <li><strong>Source-matched:</strong> benchmark and training corpora share a broad physics source pool but remain instance-disjoint.</li>
+              <li><strong>Manually aligned:</strong> annotators redraw structure and variable layers while preserving the physical system.</li>
+              <li><strong>Fine-grained metadata:</strong> discipline, field, domain, visual evidence type, and reasoning skill annotations support targeted analysis.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="container is-max-widescreen">
+        <div class="narrow">
+          <h2 class="title is-3 section-title">Test-Time Modality Transfer</h2>
+          <p class="section-lead">
+            Across evaluated models, average accuracy drops from <strong>49.2%</strong> at Level 1 to <strong>35.8%</strong> at Level 4. The largest average gap occurs at Level 2 to Level 3, where models must ground variables and labels from images.
+          </p>
+        </div>
+        <div class="table-container result-table">
+          <table class="table is-fullwidth is-hoverable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>L1</th>
+                <th>L2</th>
+                <th>L3</th>
+                <th>L4</th>
+                <th>Cons<sub>4</sub></th>
+                <th>&Delta;<sub>S</sub></th>
+                <th>&Delta;<sub>V</sub></th>
+                <th>&Delta;<sub>R</sub></th>
+                <th>&Delta;<sub>T</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="human"><td>Human Performance</td><td>54.0</td><td>58.5</td><td>59.5</td><td>56.0</td><td>49.0</td><td>-4.5</td><td>-1.0</td><td>3.5</td><td>-2.0</td></tr>
+              <tr><td>GPT-5.4</td><td>67.4</td><td>64.1</td><td>55.8</td><td>53.0</td><td>32.6</td><td>3.3</td><td>8.3</td><td>2.8</td><td>14.4</td></tr>
+              <tr><td>GPT-5</td><td>41.8</td><td>32.9</td><td>23.8</td><td>23.2</td><td>8.9</td><td>8.9</td><td>9.1</td><td>0.5</td><td>18.5</td></tr>
+              <tr><td>Gemini-3.1-Pro</td><td>71.0</td><td><strong>72.0</strong></td><td><strong>66.5</strong></td><td><strong>66.5</strong></td><td><strong>47.0</strong></td><td>-1.0</td><td>5.5</td><td>0.0</td><td>4.5</td></tr>
+              <tr><td>Claude-4.7-Opus</td><td><strong>74.0</strong></td><td>67.0</td><td>56.5</td><td>46.5</td><td>33.5</td><td>7.0</td><td>10.5</td><td>10.0</td><td>27.5</td></tr>
+              <tr><td>Qwen-3.6-flash</td><td>61.4</td><td>59.3</td><td>49.9</td><td>48.4</td><td>29.9</td><td>2.1</td><td>9.4</td><td>1.5</td><td>13.0</td></tr>
+              <tr><td>Qwen3.5-27B</td><td>45.0</td><td>34.8</td><td>28.0</td><td>25.6</td><td>9.9</td><td>10.3</td><td>6.8</td><td>2.4</td><td>19.4</td></tr>
+              <tr><td>Gemma-4-31B-it</td><td>38.9</td><td>33.5</td><td>23.9</td><td>22.0</td><td>8.9</td><td>5.4</td><td>9.6</td><td>1.9</td><td>16.9</td></tr>
+              <tr class="average"><td>Average</td><td>49.2</td><td>46.1</td><td>38.7</td><td>35.8</td><td>21.4</td><td>3.0</td><td>7.4</td><td>2.9</td><td>13.4</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">
+          Accuracy and consistency are percentages. Positive transfer gaps indicate degradation under a more visual representation; &Delta;<sub>V</sub> measures the variable-grounding gap from Level 2 to Level 3.
+        </p>
+      </div>
+    </section>
+
+    <section id="training" class="section light-band">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title">Training-Time Diagnostic</h2>
+        <p class="section-lead">
+          SeePhys Pro also tests whether multimodal RLVR improvements are visually grounded. A blind-training control masks all training images, yet still improves unmasked validation accuracy, showing that final-answer gains alone can overstate visual grounding.
+        </p>
+        <figure class="figure-panel">
+          <img src="./static/images/train_diagnostic.png" alt="Normal and blind RL diagnostic curves on SeePhys Pro.">
+          <figcaption>
+            Normal and blind RL both improve accuracy on Level 1--4, but the total transfer gap and variable-grounding gap remain large.
+          </figcaption>
+        </figure>
+        <div class="columns insight-grid">
+          <div class="column"><div class="insight"><strong>PhysRL-40K / PhysRL-8K</strong><span>Large-scale physics RL corpora built from the same source pool, with benchmark-disjoint instances.</span></div></div>
+          <div class="column"><div class="insight"><strong>Blind RL control</strong><span>All training images are replaced by black images while validation keeps normal visual inputs.</span></div></div>
+          <div class="column"><div class="insight"><strong>Gap dynamics</strong><span>Accuracy can rise without closing modality-transfer gaps, especially the variable-grounding gap.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title">Cross-Benchmark Controls</h2>
+        <p class="section-lead">
+          Blind gains are not unique to SeePhys Pro. Across external physics and math benchmarks, masked-image RL can recover a substantial fraction of normal RL gains, indicating sensitivity to residual textual and distributional cues.
+        </p>
+        <figure class="figure-panel">
+          <img src="./static/images/cross_benchmark.png" alt="Cross-benchmark normal and blind RL gain summary.">
+        </figure>
+      </div>
+    </section>
+
+    <section id="citation" class="section citation-band">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 section-title">Citation</h2>
+        <pre><code>@article{xiang2026seephyspro,
+  title   = {SeePhys Pro: Diagnosing Modality Transfer and Blind-Training Effects in Multimodal RLVR for Physics Reasoning},
+  author  = {Xiang, Kun and Zhang, Terry Jingchen and Liu, Zirong and Zhou, Bokai and Tang, Yueling and Yu, Junjie and Lu, Jiacong and Huang, Shangrui and Li, Heng and Zhang, Likui and Liu, Kunkun and Zhang, Changzheng and Fang, Yangle and Guo, Boqiang and Zhen, Hui-Ling and Tu, Dandan and Huang, Yinya and Liang, Xiaodan},
+  journal = {NeurIPS},
+  year    = {2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>SeePhys Pro. Website adapted from the academic project-page style used by SeePhys.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".navbar-burger").forEach(function (burger) {
+        burger.addEventListener("click", function () {
+          var target = document.getElementById(burger.dataset.target);
+          burger.classList.toggle("is-active");
+          target.classList.toggle("is-active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
