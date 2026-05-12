@@ -354,30 +354,33 @@ pre code {
 
 .minimal-stats {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 34px;
 
-  padding: 50px 0;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 72px;
+
+  padding: 42px 0;
 
   border-top: 1px solid #e5e7eb;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .minimal-item {
-  min-width: 0;
+  width: 180px;
+  text-align: center;
 }
 
 .minimal-number {
-  font-size: clamp(36px, 4.2vw, 72px);
+  font-size: clamp(32px, 3.8vw, 64px);
 
   line-height: .92;
+
   font-weight: 850;
+
   letter-spacing: -0.06em;
 
   color: #111827;
-
-  white-space: nowrap;
 }
 
 .minimal-label {
