@@ -648,7 +648,7 @@ pre code {
   padding: 13px 14px;
   text-align: center;
   border-bottom: 1px solid #e8edf3;
-  background: #f6fbfd;
+  background: #f4f8fb;
 }
 
 .sortable-table tbody td:first-child {
@@ -658,11 +658,11 @@ pre code {
 }
 
 .sortable-table tbody tr.human td {
-  background: #fff8e8;
+  background: #faf7ef;
 }
 
 .sortable-table tbody tr.average td {
-  background: #f7eef6;
+  background: #f1f0f8;
   font-weight: 850;
 }
 
