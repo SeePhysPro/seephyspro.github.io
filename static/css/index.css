@@ -310,10 +310,10 @@ pre code {
 }
 
 .footer {
-  background: #f5f7fa;
-  border-top: 1px solid #e8edf3;
+  background: #fafbfc;
+  border-top: 0;
   color: #5f6977;
-  padding: 4.5rem 1.5rem 5rem;
+  padding: 2rem 1.5rem;
 }
 
 @media screen and (max-width: 900px) {
