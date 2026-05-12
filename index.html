@@ -430,5 +430,90 @@
       });
     });
   </script>
+
+  <script>
+  const table = document.querySelector('.sortable-table');
+  const tbody = table.querySelector('tbody');
+  const sortableHeaders = table.querySelectorAll('th.sortable');
+
+  function getColumnIndex(th) {
+    const secondRowHeaders = Array.from(
+      table.querySelectorAll('thead tr:nth-child(2) th')
+    );
+
+    if (th.classList.contains('model-head')) {
+      return 0;
+    }
+
+    return secondRowHeaders.indexOf(th) + 1;
+  }
+
+  function getCellValue(row, index, type) {
+    const text = row.children[index].innerText.trim();
+
+    if (type === 'number') {
+      const value = parseFloat(text);
+      return Number.isNaN(value) ? -Infinity : value;
+    }
+
+    return text.toLowerCase();
+  }
+
+  sortableHeaders.forEach((th) => {
+    th.dataset.sortState = 'none';
+
+    th.addEventListener('click', () => {
+      const columnIndex = getColumnIndex(th);
+      const type = th.dataset.type || 'text';
+
+      const nextState =
+        th.dataset.sortState === 'asc' ? 'desc' : 'asc';
+
+      sortableHeaders.forEach((header) => {
+        header.dataset.sortState = 'none';
+
+        const mark = header.querySelector('.sort-mark');
+
+        if (mark) mark.textContent = '';
+      });
+
+      th.dataset.sortState = nextState;
+
+      th.querySelector('.sort-mark').textContent =
+        nextState === 'asc' ? '↑' : '↓';
+
+      const allRows = Array.from(
+        tbody.querySelectorAll('tr')
+      );
+
+      const fixedRows = allRows.filter(
+        (row) => row.classList.contains('average')
+      );
+
+      const sortableRows = allRows.filter(
+        (row) => !row.classList.contains('average')
+      );
+
+      sortableRows.sort((a, b) => {
+        const aValue = getCellValue(a, columnIndex, type);
+        const bValue = getCellValue(b, columnIndex, type);
+
+        if (type === 'number') {
+          return nextState === 'asc'
+            ? aValue - bValue
+            : bValue - aValue;
+        }
+
+        return nextState === 'asc'
+          ? String(aValue).localeCompare(String(bValue))
+          : String(bValue).localeCompare(String(aValue));
+      });
+
+      [...sortableRows, ...fixedRows].forEach((row) => {
+        tbody.appendChild(row);
+      });
+    });
+  });
+  </script>
 </body>
 </html>
