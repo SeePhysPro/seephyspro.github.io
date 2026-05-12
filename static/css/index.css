@@ -372,13 +372,13 @@ pre code {
 }
 
 .minimal-number {
-  font-size: clamp(32px, 3.8vw, 64px);
+  font-size: clamp(28px, 3.2vw, 56px);
 
   line-height: .92;
 
   font-weight: 850;
 
-  letter-spacing: -0.06em;
+  letter-spacing: -0.02em;
 
   color: #111827;
 }
