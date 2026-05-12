@@ -356,9 +356,11 @@ pre code {
   display: flex;
 
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
-  gap: 72px;
+  flex-wrap: wrap;
+
+  gap: 48px;
 
   padding: 28px 0;
 
@@ -401,8 +403,19 @@ pre code {
 }
 
 @media (max-width: 900px) {
+
   .minimal-stats {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 48px;
   }
+
+  .minimal-item {
+    width: 140px;
+  }
+
+  .minimal-number {
+    font-size: 52px;
+  }
+
 }
