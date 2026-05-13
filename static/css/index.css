@@ -622,6 +622,10 @@ pre code {
   color: #111827;
 }
 
+.result-table thead th[rowspan="2"] {
+  border-bottom: 1px solid #d7dde5;
+}
+
 .level-grid,
 .handdrawn-levels {
   display: grid;
