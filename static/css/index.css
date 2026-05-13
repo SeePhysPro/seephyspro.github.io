@@ -689,3 +689,34 @@ pre code {
     max-width: 520px;
   }
 }
+
+.level-card::before {
+  content: "" !important;
+  display: block !important;
+  width: 38px !important;
+  height: 8px !important;
+  border-radius: 999px !important;
+  background: color-mix(in srgb, var(--accent) 34%, white) !important;
+  margin-bottom: 12px !important;
+  transform: rotate(-4deg) !important;
+}
+
+.level-card b {
+  color: var(--accent) !important;
+}
+
+.level-card.l1 {
+  --accent: #4e8df7 !important;
+}
+
+.level-card.l2 {
+  --accent: #34a873 !important;
+}
+
+.level-card.l3 {
+  --accent: #e2ad36 !important;
+}
+
+.level-card.l4 {
+  --accent: #e97868 !important;
+}
