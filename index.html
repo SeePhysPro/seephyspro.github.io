@@ -147,27 +147,53 @@
             Four semantically aligned variants: L1 text-only, L2 structure in image, L3 structure and variables in image, and L4 full problem rendered as a single visual input.
           </figcaption>
         </figure>
-        <div class="columns level-cards">
-        <div class="level-grid">
+        <div class="level-grid handdrawn-levels">
+        
           <div class="level-card l1">
+            <div class="corner-tag"></div>
             <b>L1</b>
             <span>Text-only physics reasoning baseline.</span>
           </div>
         
           <div class="level-card l2">
+            <div class="corner-tag"></div>
             <b>L2</b>
             <span>Physical structure moves into the diagram.</span>
           </div>
         
           <div class="level-card l3">
+            <div class="corner-tag"></div>
             <b>L3</b>
             <span>Variables and labels must be read and grounded visually.</span>
           </div>
         
           <div class="level-card l4">
+            <div class="corner-tag"></div>
             <b>L4</b>
             <span>Full handwritten statement and diagram are processed as one image.</span>
           </div>
+        
+        </div>
+        
+        <div class="flow-arrow">
+          <svg viewBox="0 0 600 120" fill="none">
+            <path
+              d="M10 60
+              C120 20, 180 100, 300 60
+              S500 20, 560 60"
+              stroke="#94a3b8"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-dasharray="14 14"
+            />
+            <path
+              d="M530 28 L570 60 L530 92"
+              stroke="#94a3b8"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
       </div>
     </section>
