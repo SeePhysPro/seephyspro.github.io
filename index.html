@@ -248,7 +248,7 @@
                   Transfer gap
                 </th>
 
-                <th rowspan="2" class="model-head sortable" data-type="number">
+                <th rowspan="2" class="avg-head sortable" data-type="number">
                   Avg(L1-L4)<span class="sort-mark"></span>
                 </th>
               </tr>
@@ -485,14 +485,18 @@
   const sortableHeaders = table.querySelectorAll('th.sortable');
 
   function getColumnIndex(th) {
-    const secondRowHeaders = Array.from(
-      table.querySelectorAll('thead tr:nth-child(2) th')
-    );
-
     if (th.classList.contains('model-head')) {
       return 0;
     }
-
+  
+    if (th.classList.contains('avg-head')) {
+      return 10;
+    }
+  
+    const secondRowHeaders = Array.from(
+      table.querySelectorAll('thead tr:nth-child(2) th')
+    );
+  
     return secondRowHeaders.indexOf(th) + 1;
   }
 
