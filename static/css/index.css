@@ -793,3 +793,125 @@ pre code {
 .level-card.l4 {
   --accent: #e97868 !important;
 }
+
+.stats-strip {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 34px;
+
+  padding: 26px 0;
+
+  border-top: 2px dashed rgba(31, 41, 55, 0.16);
+
+  border-bottom: 2px dashed rgba(31, 41, 55, 0.16);
+}
+
+.stat-card {
+  flex: 1;
+
+  min-width: 0;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.stat-number {
+  color: var(--accent);
+
+  font-family:
+    "Comic Sans MS",
+    "Bradley Hand",
+    "Segoe Print",
+    cursive;
+
+  font-size: clamp(48px, 5vw, 74px);
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: 0.01em;
+
+  display: inline-block;
+
+  transform: rotate(var(--num-tilt));
+
+  text-shadow:
+    1px 1px 0 rgba(31,41,55,0.05);
+
+  font-variant-numeric:
+    lining-nums
+    tabular-nums;
+
+  white-space: nowrap;
+}
+
+.stat-label {
+  margin-top: 10px;
+
+  color: #667085;
+
+  font-size: 15px;
+
+  line-height: 1.35;
+
+  font-weight: 750;
+}
+
+.stat-card:nth-child(1) {
+  --accent: var(--blue);
+  --num-tilt: 0deg;
+}
+
+.stat-card:nth-child(2) {
+  --accent: #111827;
+  --num-tilt: 0deg;
+}
+
+.stat-card:nth-child(3) {
+  --accent: #111827;
+  --num-tilt: -1deg;
+}
+
+.stat-card:nth-child(4) {
+  --accent: #111827;
+  --num-tilt: 0.8deg;
+}
+
+.stat-card:nth-child(5) {
+  --accent: #111827;
+  --num-tilt: -0.6deg;
+}
+
+@media (max-width: 900px) {
+  .stats-strip {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 24px 32px;
+  }
+
+  .stat-card {
+    width: 140px;
+    flex: unset;
+  }
+}
+
+@media (max-width: 560px) {
+  .stats-strip {
+    flex-direction: column;
+
+    gap: 26px;
+  }
+
+  .stat-number {
+    font-size: 58px;
+  }
+}
