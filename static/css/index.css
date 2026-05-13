@@ -542,64 +542,79 @@ pre code {
   color: #111827;
 }
 
+.level-grid,
 .handdrawn-levels {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 34px;
+  gap: 28px;
   margin-top: 42px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .level-card {
-  --accent: #4e8df7;
+  --accent: var(--blue);
 
   position: relative;
 
-  min-height: 335px;
-  padding: 28px 28px 26px;
+  min-height: 0;
 
-  background: #ffffff;
+  padding: 14px 18px 14px;
 
-  border: 4px solid #5b6472;
-  border-radius: 34px 30px 36px 28px;
+  border: 2.5px solid #5b6472;
+
+  border-radius: 24px 22px 26px 20px;
+
+  background: #fff;
 
   box-shadow:
-    10px 12px 0 color-mix(in srgb, var(--accent) 23%, transparent);
+    6px 7px 0 color-mix(in srgb, var(--accent) 20%, transparent);
+
+  transform: rotate(var(--tilt, 0deg));
 
   transition:
     transform 220ms ease,
     box-shadow 220ms ease;
 }
 
-.level-card:hover {
-  transform: translateY(-7px);
-  box-shadow:
-    13px 15px 0 color-mix(in srgb, var(--accent) 23%, transparent);
-}
+.level-card::before {
+  content: "";
 
-.corner-tag {
-  width: 72px;
-  height: 16px;
+  display: block;
+
+  width: 38px;
+  height: 8px;
 
   border-radius: 999px;
 
-  background: color-mix(in srgb, var(--accent) 35%, white);
+  background:
+    color-mix(in srgb, var(--accent) 34%, white);
 
-  margin-bottom: 52px;
+  margin-bottom: 12px;
+
+  transform: rotate(-4deg);
+}
+
+.level-card:hover {
+  transform: translateY(-4px) rotate(0deg);
+
+  box-shadow:
+    7px 9px 0 color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 .level-card b {
   display: block;
 
-  margin-bottom: 28px;
+  margin-bottom: 12px;
 
-  font-size: clamp(58px, 5.4vw, 78px);
+  color: var(--accent);
+
+  font-size: clamp(30px, 2.6vw, 40px);
 
   line-height: 1;
 
   font-weight: 900;
 
-  color: var(--accent);
+  letter-spacing: 0.02em;
 }
 
 .level-card span {
@@ -607,29 +622,34 @@ pre code {
 
   color: #556070;
 
-  font-size: clamp(18px, 1.55vw, 22px);
+  font-size: clamp(13px, 0.92vw, 15px);
 
-  line-height: 1.5;
+  line-height: 1.35;
 
   font-weight: 700;
 }
 
 .level-card.l1 {
-  --accent: #4e8df7;
+  --accent: var(--blue);
+  --tilt: -0.8deg;
 }
 
 .level-card.l2 {
-  --accent: #34b37b;
+  --accent: var(--green);
+  --tilt: 0.5deg;
 }
 
 .level-card.l3 {
-  --accent: #e0a92e;
+  --accent: var(--gold);
+  --tilt: -0.4deg;
 }
 
 .level-card.l4 {
-  --accent: #ef7567;
+  --accent: var(--coral);
+  --tilt: 0.7deg;
 }
 
+.arrow-wrap,
 .flow-arrow {
   width: 100%;
 
@@ -637,50 +657,59 @@ pre code {
 
   display: flex;
   justify-content: center;
+
+  color: #94a3b8;
 }
 
+.arrow-wrap svg,
 .flow-arrow svg {
   width: 520px;
+
   max-width: 72%;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
+  .level-grid,
   .handdrawn-levels {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
   }
 
   .level-card {
-    min-height: 300px;
+    min-height: 190px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 560px) {
+  .level-grid,
   .handdrawn-levels {
     grid-template-columns: 1fr;
-    gap: 20px;
+
+    gap: 18px;
   }
 
   .level-card {
     min-height: auto;
+
     padding: 24px 24px 22px;
   }
 
-  .corner-tag {
-    margin-bottom: 34px;
+  .level-card::before {
+    margin-bottom: 24px;
   }
 
   .level-card b {
-    font-size: 56px;
-    margin-bottom: 20px;
+    font-size: 44px;
+
+    margin-bottom: 14px;
   }
 
   .level-card span {
-    font-size: 18px;
+    font-size: 17px;
   }
 
-  .flow-arrow svg {
-    width: 360px;
-    max-width: 86%;
+  .arrow-wrap {
+    max-width: 520px;
   }
 }
