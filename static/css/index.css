@@ -539,7 +539,8 @@ pre code {
   border-bottom: 0;
 }
 
-.sortable-table thead tr:first-child .model-head {
+.sortable-table thead tr:first-child .model-head,
+.sortable-table thead tr:first-child .avg-head {
   border-bottom: 1px solid #e4e7eb;
 }
 
@@ -565,6 +566,11 @@ pre code {
 
 .model-head {
   width: 260px;
+}
+
+.avg-head {
+  min-width: 120px;
+  text-align: center !important;
 }
 
 .group-head {
@@ -620,10 +626,6 @@ pre code {
 .sortable-table strong {
   font-weight: 850;
   color: #111827;
-}
-
-.result-table thead th[rowspan="2"] {
-  border-bottom: 1px solid #d7dde5;
 }
 
 .level-grid,
