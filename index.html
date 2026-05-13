@@ -8,6 +8,7 @@
   <title>SeePhys Pro</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Kalam:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
@@ -79,36 +80,30 @@
           </div>
 
           <div class="publication-links">
-            <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2605.09266v1">
+            <a class="button is-rounded is-link-chip" href="https://arxiv.org/abs/2605.09266" target="_blank" rel="noopener noreferrer">
               <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
             </a>
-            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/Kun-Xiang/PhysRL-8K">
-              🤗 PhysRL-8K
+            <a class="button is-rounded is-link-chip" href="https://github.com/AI4Phys/SeePhy-Pro" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="fab fa-github"></i></span><span>GitHub</span>
             </a>
-            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/Kun-Xiang/PhysRL-38K">
-              🤗 PhysRL-38K
+            <a class="button is-rounded is-link-chip" href="https://ai4math2026.github.io/" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span><span>Workshop</span>
             </a>
-            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/Kun-Xiang/Track3-SeePhysPro-Test">
-              🤗 Test
+            <a class="button is-rounded is-link-chip" href="https://www.codabench.org/competitions/16010/" target="_blank" rel="noopener noreferrer">
+              <span class="icon"><i class="fas fa-rocket"></i></span><span>Challenge</span>
             </a>
-            <a class="button is-dark is-rounded" href="https://huggingface.co/datasets/Kun-Xiang/Track3-SeePhysPro-Testmini">
-              🤗 Testmini
+            <a class="button is-rounded is-link-chip" href="https://huggingface.co/datasets/Kun-Xiang/PhysRL" target="_blank" rel="noopener noreferrer">
+              <span>Training Set</span>
             </a>
-            <a class="button is-dark is-rounded" href="#results">
-              🏆 Leaderboard
-            </a>
-            <a class="button is-dark is-rounded" href="https://www.codabench.org/competitions/16010/">
-              🚀 Challenge
-            </a>
-            <a class="button is-dark is-rounded is-disabled" aria-disabled="true">
-              <span class="icon"><i class="fab fa-github"></i></span><span>Code coming soon</span>
+            <a class="button is-rounded is-link-chip" href="https://huggingface.co/datasets/Kun-Xiang/SeePhysPro" target="_blank" rel="noopener noreferrer">
+              <span>Benchmark</span>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section compact">
+    <section class="section compact news-section">
       <div class="container is-max-desktop">
     
         <h2 class="title is-3 section-title news-title">
@@ -116,23 +111,48 @@
         </h2>
     
         <div class="news-list">
-    
           <div class="news-item">
-            <span class="news-icon">🎯</span>
-    
-            <span class="news-date">[2026-05-01]</span>
-    
+            <span class="news-marker"></span>
+            <span class="news-date">[2026-05-13]</span>
             <span class="news-text">
-              We are hosting a challenge at the ICML 2026 workshop!
-              Check out the
-              <a href="https://ai4math2026.github.io/" target="_blank">
-                workshop website
-              </a>
-              and the
-              <a href="https://www.codabench.org/competitions/16010/" target="_blank">
-                challenge page
-              </a>.
-              🚀
+              We release the official
+              <a href="https://github.com/AI4Phys/SeePhy-Pro" target="_blank" rel="noopener noreferrer">code</a>
+              for SeePhys Pro.
+            </span>
+          </div>
+
+          <div class="news-item">
+            <span class="news-marker"></span>
+            <span class="news-date">[2026-05-13]</span>
+            <span class="news-text">
+              The
+              <a href="https://arxiv.org/abs/2605.09266" target="_blank" rel="noopener noreferrer">arXiv paper</a>
+              and
+              <a href="https://seephyspro.github.io" target="_blank" rel="noopener noreferrer">project page</a>
+              are online.
+            </span>
+          </div>
+
+          <div class="news-item">
+            <span class="news-marker"></span>
+            <span class="news-date">[2026-05-13]</span>
+            <span class="news-text">
+              We release the
+              <a href="https://huggingface.co/datasets/Kun-Xiang/PhysRL" target="_blank" rel="noopener noreferrer">PhysRL training set</a>
+              and
+              <a href="https://huggingface.co/datasets/Kun-Xiang/SeePhysPro" target="_blank" rel="noopener noreferrer">SeePhys Pro benchmark</a>
+              on Hugging Face.
+            </span>
+          </div>
+
+          <div class="news-item">
+            <span class="news-marker"></span>
+            <span class="news-date">[2026-05-13]</span>
+            <span class="news-text">
+              SeePhys Pro is included as
+              <a href="https://www.codabench.org/competitions/16010/" target="_blank" rel="noopener noreferrer">Challenge 3</a>
+              at the
+              <a href="https://ai4math2026.github.io/" target="_blank" rel="noopener noreferrer">3rd AI for Math Workshop at ICML 2026</a>.
             </span>
           </div>
         </div>
@@ -320,6 +340,20 @@
         
             <tbody>
             
+              <tr class="human">
+                <td>Human Performance</td>
+                <td>54.0</td>
+                <td>58.5</td>
+                <td>59.5</td>
+                <td>56.0</td>
+                <td>49.0</td>
+                <td>-4.5</td>
+                <td>-1.0</td>
+                <td>3.5</td>
+                <td>-2.0</td>
+                <td>57.00</td>
+              </tr>
+
               <tr>
                 <td>Gemini-3.1-Pro</td>
                 <td>71.0</td>
@@ -361,21 +395,6 @@
                 <td>14.4</td>
                 <td><strong>60.08</strong>🥉</td>
               </tr>
-            
-              <tr class="human">
-                <td>Human Performance</td>
-                <td>54.0</td>
-                <td>58.5</td>
-                <td>59.5</td>
-                <td>56.0</td>
-                <td>49.0</td>
-                <td>-4.5</td>
-                <td>-1.0</td>
-                <td>3.5</td>
-                <td>-2.0</td>
-                <td>57.00</td>
-              </tr>
-            
               <tr>
                 <td>Qwen-3.6-flash</td>
                 <td>61.4</td>
@@ -495,19 +514,16 @@
           <pre class="citation-box"><code>@article{xiang2026seephyspro,
       title   = {SeePhys Pro: Diagnosing Modality Transfer and Blind-Training Effects in Multimodal RLVR for Physics Reasoning},
       author  = {Xiang, Kun and Zhang, Terry Jingchen and Liu, Zirong and Zhou, Bokai and Tang, Yueling and Yu, Junjie and Lu, Jiacong and Huang, Shangrui and Li, Heng and Zhang, Likui and Liu, Kunkun and Zhang, Changzheng and Fang, Yangle and Guo, Boqiang and Zhen, Hui-Ling and Tu, Dandan and Huang, Yinya and Liang, Xiaodan},
-      journal = {arXiv},
-      year    = {2026}
+      journal = {arXiv preprint arXiv:2605.09266},
+      year    = {2026},
+      url     = {https://arxiv.org/abs/2605.09266}
     }</code></pre>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>SeePhys Pro. Website adapted from the academic project-page style used by SeePhys.</p>
-    </div>
-  </footer>
+  <footer class="footer"></footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -580,12 +596,18 @@
         tbody.querySelectorAll('tr')
       );
 
-      const fixedRows = allRows.filter(
+      const humanRows = allRows.filter(
+        (row) => row.classList.contains('human')
+      );
+
+      const averageRows = allRows.filter(
         (row) => row.classList.contains('average')
       );
 
       const sortableRows = allRows.filter(
-        (row) => !row.classList.contains('average')
+        (row) =>
+          !row.classList.contains('human') &&
+          !row.classList.contains('average')
       );
 
       sortableRows.sort((a, b) => {
@@ -603,7 +625,7 @@
           : String(bValue).localeCompare(String(aValue));
       });
 
-      [...sortableRows, ...fixedRows].forEach((row) => {
+      [...humanRows, ...sortableRows, ...averageRows].forEach((row) => {
         tbody.appendChild(row);
       });
     });
