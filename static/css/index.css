@@ -831,3 +831,39 @@ pre code {
   --accent: #e97868 !important;
 }
 
+.news-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  font-family:
+    "Inter",
+    "Plus Jakarta Sans",
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1.55;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+
+  color: #3b4048;
+}
+
+.news-date {
+  font-weight: 900;
+
+  color: #4b5563;
+}
+
+.news-text a {
+  color: #2563eb;
+
+  font-weight: 850;
+
+  text-decoration: none;
+}
