@@ -99,6 +99,45 @@
 
     <section class="section compact">
       <div class="container is-max-desktop">
+    
+        <h2 class="title is-3 section-title news-title">
+          🔔 News
+        </h2>
+    
+        <div class="news-list">
+    
+          <div class="news-item">
+            <span class="news-icon">‼️</span>
+    
+            <span class="news-date">[2026-02-12]</span>
+    
+            <span class="news-text">
+              We have released the answers for the MMMU test set!
+              You can now evaluate your models on the test set locally! 🎉
+            </span>
+          </div>
+    
+          <div class="news-item">
+            <span class="news-icon">🔥</span>
+    
+            <span class="news-date">[2024-09-05]</span>
+    
+            <span class="news-text">
+              Introducing
+              <a href="https://mmmu-benchmark.github.io/" target="_blank">
+                MMMU-Pro
+              </a>,
+              a robust version of MMMU benchmark for multimodal AI evaluation! 🚀
+            </span>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
+    
+    <section class="section compact">
+      <div class="container is-max-desktop">
         <h2 class="title is-3 section-title">Introduction</h2>
     
         <div class="content has-text-justified">
@@ -519,7 +558,7 @@
       const type = th.dataset.type || 'text';
 
       const nextState =
-        th.dataset.sortState === 'asc' ? 'desc' : 'asc';
+        th.dataset.sortState === 'desc' ? 'asc' : 'desc';
 
       sortableHeaders.forEach((header) => {
         header.dataset.sortState = 'none';
