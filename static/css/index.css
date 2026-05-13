@@ -683,3 +683,104 @@ pre code {
   font-weight: 850;
   color: #111827;
 }
+
+.handdrawn-levels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.level-card {
+  --accent: #4e8df7;
+
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 34px 34px 28px;
+
+  background: #ffffff;
+
+  border: 4px solid #5b6472;
+
+  border-radius: 32px 28px 34px 26px;
+
+  box-shadow:
+    12px 12px 0 color-mix(in srgb, var(--accent) 24%, transparent);
+
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.level-card:hover {
+  transform: translateY(-8px);
+}
+
+.corner-tag {
+  width: 74px;
+  height: 18px;
+
+  border-radius: 999px;
+
+  background: color-mix(in srgb, var(--accent) 35%, white);
+
+  margin-bottom: 36px;
+}
+
+.level-card b {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-size: 72px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  color: var(--accent);
+}
+
+.level-card span {
+  display: block;
+
+  color: #556070;
+
+  font-size: 22px;
+
+  line-height: 1.55;
+
+  font-weight: 700;
+}
+
+.level-card.l1 {
+  --accent: #4e8df7;
+}
+
+.level-card.l2 {
+  --accent: #34b37b;
+}
+
+.level-card.l3 {
+  --accent: #e0a92e;
+}
+
+.level-card.l4 {
+  --accent: #ef7567;
+}
+
+.flow-arrow {
+  width: 100%;
+
+  margin-top: 28px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.flow-arrow svg {
+  width: 760px;
+  max-width: 90%;
+}
