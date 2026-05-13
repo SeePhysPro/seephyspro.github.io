@@ -203,30 +203,6 @@ body {
   margin-top: 0.9rem;
 }
 
-.level-card,
-.insight {
-  background: #ffffff;
-  border: 1px solid #e4e9ef;
-  border-radius: 8px;
-  height: 100%;
-  padding: 1rem;
-}
-
-.level-card b,
-.insight strong {
-  color: #243447;
-  display: block;
-  font-family: "Google Sans", "Noto Sans", Arial, sans-serif;
-  font-size: 1.05rem;
-  margin-bottom: 0.35rem;
-}
-
-.level-card span,
-.insight span {
-  color: #5d6876;
-  display: block;
-  font-size: 0.94rem;
-}
 
 .clean-list {
   margin-left: 0;
