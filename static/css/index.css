@@ -36,12 +36,31 @@ main,
 }
 
 .topnav {
-  background: rgba(255, 255, 255, 0.84);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid #eceff3;
+  background:
+    repeating-linear-gradient(104deg, rgba(255, 255, 255, 0.16) 0 2px, transparent 2px 12px),
+    linear-gradient(118deg, rgba(255, 231, 169, 0.78), rgba(223, 242, 255, 0.74) 58%, rgba(228, 245, 220, 0.72));
+  backdrop-filter: blur(16px) saturate(1.08);
+  border-bottom: 1px solid rgba(184, 196, 212, 0.52);
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.045);
   position: sticky;
   top: 0;
   z-index: 20;
+}
+
+.topnav .navbar-menu,
+.topnav .navbar-brand {
+  background: transparent;
+}
+
+.topnav .navbar-item {
+  color: #263241;
+  font-weight: 650;
+}
+
+.topnav .navbar-item:hover,
+.topnav .navbar-item:focus {
+  background: rgba(255, 255, 255, 0.32);
+  color: #18457a;
 }
 
 .brand,
@@ -55,6 +74,20 @@ main,
 .brand {
   font-weight: 700;
   letter-spacing: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .topnav .navbar-menu {
+    background:
+      repeating-linear-gradient(104deg, rgba(255, 255, 255, 0.16) 0 2px, transparent 2px 12px),
+      linear-gradient(118deg, rgba(255, 239, 191, 0.96), rgba(232, 245, 255, 0.96) 62%, rgba(237, 248, 231, 0.96));
+    border-top: 1px solid rgba(184, 196, 212, 0.42);
+    box-shadow: 0 12px 24px rgba(31, 41, 55, 0.06);
+  }
+
+  .topnav .navbar-burger:hover {
+    background: rgba(255, 255, 255, 0.28);
+  }
 }
 
 .project-hero {
